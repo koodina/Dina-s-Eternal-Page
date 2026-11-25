@@ -3,167 +3,253 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="dina (Kooguang): CS major, Dr. Phaidei, and the person behind the Phaidei Archive and the Lost Phone AU.">
-<title>dina × Phaidei</title>
+<title>The Eternal Page · dina</title>
+<meta name="description" content="dina, aka Dr. Phaidei: everything I've written for the Phaidei fandom.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Caveat:wght@500;700&family=Figtree:ital,wght@0,400;0,600;0,800;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cinzel:wght@500;600;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Figtree:wght@400;600&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="page">
 
-<div class="wrap">
-
-  <!-- ===== HERO: your name, intro line, chips and the photo pile ===== -->
-  <header class="hero">
-    <div class="hero-text">
-      <div class="kicker">she/her · 21 · arab · Phaidei scholar</div>
-      <h1><small>hi, i'm dina, and this is my</small><span class="grad">Phaidei</span> corner</h1>
-      <p class="lede">CS major, <b>Phaidei-obsessed</b>, and the person who builds the website when the fandom needs one. Here's everything I've made, plus a little bit about me.</p>
-      <div class="chips">
-        <span class="chip b">@Kooguang on Twitter</span>
-        <span class="chip r">3 PhDs in Phaideiology</span>
-        <span class="chip g">no AI, no monetization</span>
-      </div>
-    </div>
-    <div class="pile" aria-hidden="true">
-      <div class="p-archive"><div class="tape"></div><img src="images/archive.jpg" alt=""><span>the archive ♡</span></div>
-      <div class="p-phone"><img src="images/lock.jpg" alt=""></div>
-      <div class="p-note">they call me Dr. Phaidei</div>
-      <div class="p-stamp">I LOVE<br>✦<br>PHAIDEI</div>
+  <!-- ===== TOP BAR ===== -->
+  <header class="top">
+    <div class="gutter">
+      <a class="brand" href="#top">
+        <svg width="30" height="30" viewBox="-20 -20 40 40" aria-hidden="true"><circle r="17" fill="none" stroke="#d8b46a" stroke-width="1.5"/><circle r="7" fill="#d8b46a"/><g stroke="#d8b46a" stroke-width="1.5"><line y1="-10" y2="-15"/><line y1="10" y2="15"/><line x1="-10" x2="-15"/><line x1="10" x2="15"/></g></svg>
+        <span><small>As I've Written</small><b>The Eternal Page</b></span>
+      </a>
+      <nav class="tabs" aria-label="Sections">
+        <a href="#foreword">Foreword</a>
+        <a href="#chapters">Chapters</a>
+        <a href="#postscript">Postscript</a>
+      </nav>
     </div>
   </header>
 
-  <!-- ===== MY PHAIDEI WORKS: copy one <article class="work"> block to add a new project ===== -->
-  <section aria-labelledby="works-h">
-    <div class="sh">
-      <div class="meander"></div>
-      <div class="row"><h2 id="works-h">My Phaidei works</h2><span class="aside">(made with love and very little sleep)</span></div>
-    </div>
-
-    <div class="works">
-
-      <article class="work">
-        <div class="shotcol">
-          <figure class="frame-wide" style="margin:0"><div class="tape"></div><img src="images/archive.jpg" alt="The Phaidei Archive home page: a gold-on-navy header with Phainon and Mydei, a blue-to-red title and search and filter controls"><figcaption class="cap">khaslana could never</figcaption></figure>
-          <div class="sticker bl">built when AO3 went down</div>
+  <!-- ===== HERO: the memory wheel (memories are in script.js) ===== -->
+  <section class="hero" id="top">
+    <div class="gutter">
+      <div class="hero-copy">
+        <div class="eyebrow">dina's saga · Phainon ✦ Mydei</div>
+        <h1>The Eternal Page</h1>
+        <p class="lede">Hi, I'm dina, also known as <i>Dr. Phaidei</i>. I code, I yap, and I build websites for the Phaidei fandom. Everything I've written lives here.</p>
+        <div class="hint">↳ tap the wheel to recover my memories</div>
+        <div class="memory" id="memory" aria-live="polite">
+          <span class="num" id="mem-num">Prologue</span>
+          <h3 id="mem-title">Twelve memories, scattered</h3>
+          <p id="mem-text">Each numeral on the wheel holds a little piece of me. Recover all twelve to finish the page.</p>
         </div>
-        <div class="info">
-          <div class="no"><b>Work 01</b><span>fan archive</span><span>2026</span></div>
-          <h3>Phaidei Archive</h3>
-          <p class="quote">"when khaslana burns your library so you gotta improvise"</p>
-          <p>When AO3 went down, all our favorite Phaidei fics were stuck in a messy Google Drive. So I built a proper library for them: every work saved from the Phaidei drive, with its tags kept, so you can actually find what you want to read.</p>
-          <ul class="feats">
-            <li>Search by title, author or summary, and filter by any tag, rating or status</li>
-            <li>A "Surprise me" button for when you can't decide</li>
-            <li>Bookmarks that live only in your own browser</li>
-            <li>A built-in reader, fed by a little Python script that turns saved epubs into data</li>
-          </ul>
-          <div class="stats">
-            <div class="stat"><b>435</b><span>works archived</span></div>
-            <div class="stat"><b>0</b><span>ads or AI</span></div>
-          </div>
-          <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>GitHub Pages</span></div>
-          <a class="visit" href="https://koodina.github.io/phaidei-archive/" target="_blank" rel="noopener">Visit the archive ↗</a>
-        </div>
-      </article>
-
-      <article class="work">
-        <div class="shotcol">
-          <div class="frame-phone"><img src="images/lock.jpg" alt="Phainon's phone lock screen: forget-me-not wallpaper, 07:51, and missed calls and messages from Castorice, Hyacine and Aglaea"></div>
-          <div class="sticker tr">the passcode is a clue btw</div>
-        </div>
-        <div class="info">
-          <div class="no"><b>Work 02</b><span>interactive AU</span><span>2026</span></div>
-          <h3>Lost Phone · Phaidei AU</h3>
-          <p class="quote">"Saturday, 07:51. The beach at Aedes Elysiae is almost empty."</p>
-          <p>You find Phainon's phone half buried in the sand, and it won't stop buzzing. The whole story is told through his phone: you unlock it, read his messages, dig through his photos and notes, and piece together what happened. What you find, and who you answer, decides how it ends.</p>
-          <ul class="feats">
-            <li>A whole working phone: Messages, Photos, Notes, Mail, Voicemail, Calendar, Safari, Find My, Wallet and Music</li>
-            <li>A hidden album with its own password, and clues tracked as you find them</li>
-            <li>Several endings, depending on what you discover and who you reply to</li>
-            <li>Sound, ocean ambience and Coronal Radiance playing in the background</li>
-          </ul>
-          <div class="stats">
-            <div class="stat"><b>10</b><span>apps</span></div>
-            <div class="stat"><b>46</b><span>photos in his camera roll</span></div>
-            <div class="stat"><b>34</b><span>songs in his library</span></div>
-          </div>
-          <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Web Audio</span></div>
-          <a class="visit" href="https://koodina.github.io/Lost-Phone-Phaidei-Au/" target="_blank" rel="noopener">Pick up the phone ↗</a>
-        </div>
-      </article>
-
-      <article class="work">
-        <div class="shotcol">
-          <figure class="frame-wide" style="margin:0;transform:rotate(1.5deg)"><div class="tape"></div><img src="images/straw.jpg" alt="The top of dina's straw.page: a big dina! title, Phainon and Mydei art with a speech bubble saying Phainon I am in love with you, and a list of everything she likes"><figcaption class="cap">dina!</figcaption></figure>
-          <div class="sticker tr">my lil corner of the internet</div>
-        </div>
-        <div class="info">
-          <div class="no"><b>Work 03</b><span>personal page</span><span>straw.page</span></div>
-          <h3>kyspls</h3>
-          <p>My actual home on the internet. A loud, chaotic collage of everything I love: Phaidei art, gifs, the songs I have on repeat, and an anonymous "ask me something" box. If the portfolio is the tidy version of me, this is the real one.</p>
-          <div class="stack"><span>straw.page</span><span>collage</span><span>pure chaos</span></div>
-          <a class="visit" href="https://kyspls.straw.page" target="_blank" rel="noopener">Visit my straw.page ↗</a>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- ===== GET TO KNOW ME: bio and sticky-note wall (6 notes, colors set in style.css) ===== -->
-  <section aria-labelledby="me-h">
-    <div class="sh">
-      <div class="meander"></div>
-      <div class="row"><h2 id="me-h">Get to know me</h2><span class="aside">(the messy part)</span></div>
-    </div>
-    <div class="about">
-      <div class="about-text">
-        <p>I'm dina: 21, she/her, arab, and a CS major who'd honestly rather be building fandom websites than doing homework. I go by <b>Kooguang</b> on Twitter, where most of my Phaidei brainrot lives. They call me Dr. Phaidei, with 3 PhDs in Phaideiology.</p>
-        <p>I like a bunch of loser stuff, and I wouldn't change any of it. I just wanna yap, hate and have my lil fun. Everything on this page started the same way: I wanted something for the fandom that didn't exist yet, so I made it.</p>
-        <p>If you played one of my AUs or read something from the archive, I'd love to hear about it. Tell me which ending you got.</p>
+        <div class="progress"><span id="mem-count">0 / 12 recovered</span><span class="bar"><i id="mem-bar"></i></span></div>
+        <div class="complete" id="mem-done" hidden>✦ the page is complete. thank you for reading me ♡</div>
       </div>
-      <div class="wall">
-        <div class="sn"><span class="k">ship</span>Phainon × Mydei, forever and always. Phainon I am in love with you</div>
-        <div class="sn"><span class="k">anime</span>Link Click, ORV, Alien Stage, WHA, Blue Lock, BSD, JJK and a bunch more</div>
-        <div class="sn"><span class="k">kpop !!</span>Stray Kids (Lee Know), Jungkook (solo), PLAVE (Hamin)</div>
-        <div class="sn"><span class="k">gacha games !!</span>HSR, Wuthering Waves, LADS, Project Sekai, Genshin I guess</div>
-        <div class="sn"><span class="k">vtubers !!</span>Claude (!!), Kaelix, Doppio, Kenji, Leo</div>
-        <div class="sn"><span class="k">on repeat</span>The 6th Summer · PLAVE<br>SHADE · NIJISANJI EN<br>Phobia · Stray Kids</div>
+
+      <div class="dial-wrap">
+        <div class="dial" id="dial">
+          <svg viewBox="-250 -250 500 500" aria-hidden="true">
+            <defs>
+              <radialGradient id="g-disc" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#2b3aa0"/><stop offset="60%" stop-color="#152063"/><stop offset="100%" stop-color="#0b1033"/>
+              </radialGradient>
+            </defs>
+            <circle r="248" fill="url(#g-disc)" stroke="#a9823a" stroke-width="2"/>
+            <circle r="236" fill="none" stroke="#d8b46a" stroke-width="1" stroke-dasharray="2 6" opacity=".7"/>
+            <circle r="205" fill="none" stroke="#d8b46a" stroke-width="1" opacity=".35"/>
+            <circle r="150" fill="none" stroke="#d8b46a" stroke-width="1.5" opacity=".6"/>
+            <circle r="140" fill="none" stroke="#6fa8ff" stroke-width="1" opacity=".35"/>
+            <g id="spokes" stroke="#d8b46a" stroke-width="1" opacity=".3"></g>
+            <g id="links" stroke="#fff3cf" stroke-width="1.6" fill="none" opacity=".9"></g>
+          </svg>
+          <!-- the 12 nodes are added here by script.js -->
+        </div>
+        <button class="sun" id="sun" type="button" aria-label="Show the prologue again">
+          <svg viewBox="-100 -100 200 200" aria-hidden="true">
+            <g id="rays" fill="#d8b46a"></g>
+            <circle r="46" fill="#0e1645" stroke="#d8b46a" stroke-width="3"/>
+            <circle r="30" fill="#f2ead8"/>
+            <circle r="16" fill="#d8b46a"/>
+            <circle r="7" fill="#0e1645"/>
+          </svg>
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- ===== HOW I MAKE THINGS ===== -->
-  <section aria-labelledby="rules-h">
-    <div class="sh">
-      <div class="meander"></div>
-      <div class="row"><h2 id="rules-h">How I make things</h2><span class="aside">(my rules)</span></div>
-    </div>
-    <div class="rules">
-      <div class="rule"><b>For the fandom, by a fan</b><p>Everything I make is free and made for fun. No ads, no paywalls.</p></div>
-      <div class="rule"><b>No AI in the making</b><p>Every line of story and code is written by hand.</p></div>
-      <div class="rule"><b>Authors come first</b><p>I ask writers for permission, and anything gets taken down if its author asks.</p></div>
-      <div class="rule"><b>Your data stays yours</b><p>Bookmarks and progress are saved only in your own browser.</p></div>
+  <!-- ===== FOREWORD: get to know me, as a book. Each <div class="spread"> is one page you flip to. ===== -->
+  <section class="foreword" id="foreword">
+    <div class="gutter">
+      <div class="sh">
+        <div class="frieze"></div>
+        <span class="eyebrow">Foreword</span>
+        <h2>Get to know me</h2>
+        <p>The tidy version of my straw.page. Tap the page to keep reading.</p>
+      </div>
+
+      <div class="book" id="book">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <span class="ribbon" aria-hidden="true"></span>
+
+        <div class="spread" data-title="who I am">
+          <div class="leaf">
+            <span class="tag">I · 1</span>
+            <div class="big">dina!</div>
+            <div class="sub">she/her · 21 · arab</div>
+            <p>CS major, fandom website builder, and holder of <b>3 PhDs in Phaideiology</b>.</p>
+            <div class="hand">they call me Dr. Phaidei</div>
+          </div>
+          <div class="leaf">
+            <p class="q">"Phainon, I am in love with you."</p>
+            <p>The exuberant fan says.</p>
+            <p>I just wanna yap, hate and have my lil fun. When the fandom needs something that doesn't exist yet, I open my laptop and make it.</p>
+            <p class="q">dni if your name isn't Mydeimos.</p>
+          </div>
+        </div>
+
+        <div class="spread" data-title="things I love" hidden>
+          <div class="leaf">
+            <span class="tag">I · 2</span>
+            <div class="hand">likes a bunch of loser stuff</div>
+            <ul>
+              <li><b>ANIME</b>Link Click, ORV, Alien Stage, WHA, Blue Lock, BSD, JJK and a bunch more</li>
+              <li><b>KPOP !!</b>Stray Kids (Lee Know), Jungkook (solo), PLAVE (Hamin)</li>
+            </ul>
+          </div>
+          <div class="leaf">
+            <ul>
+              <li><b>VTUBERS !!</b>Claude (!!), Kaelix, Doppio, Kenji, Leo</li>
+              <li><b>GACHA GAMES !!</b>Honkai: Star Rail, Wuthering Waves, LADS, Project Sekai, Genshin I guess</li>
+              <li><b>ON REPEAT</b>The 6th Summer · PLAVE<br>SHADE · NIJISANJI EN<br>Phobia · Stray Kids</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="spread" data-title="my straw.page" hidden>
+          <div class="leaf">
+            <span class="tag">I · 3</span>
+            <img src="images/straw.jpg" alt="The top of dina's straw.page: a big dina! title, Phainon and Mydei art with a speech bubble, and a list of everything she likes">
+          </div>
+          <div class="leaf">
+            <p class="q">"Mrs 3 PhDs in Phaideiology."</p>
+            <p>My real home on the internet: a loud, messy collage of Phaidei art, gifs, the songs I have on repeat, and an anonymous box where you can ask me anything.</p>
+            <a class="btn" href="https://kyspls.straw.page" target="_blank" rel="noopener">Visit my straw.page ↗</a>
+          </div>
+        </div>
+
+        <div class="turn">
+          <span class="tip" id="tip">Tap the page to continue</span>
+          <div class="pager">
+            <button type="button" id="prev" aria-label="Previous page">‹</button>
+            <div class="dots" id="dots"></div>
+            <button type="button" id="next" aria-label="Next page">›</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT: your links ===== -->
-  <section class="contact" aria-labelledby="hi-h">
-    <div class="meander"></div>
-    <span class="hand">come say hi ♡</span>
-    <h2 id="hi-h">Tell me how it went</h2>
-    <p style="margin:0;max-width:52ch;color:var(--muted)">Which ending did you get? Got a fic you want added to the archive, or an idea for the next AU? My DMs are open.</p>
-    <div class="links">
-      <a href="https://x.com/Kooguang" target="_blank" rel="noopener">Twitter · @Kooguang</a>
-      <a href="https://github.com/koodina" target="_blank" rel="noopener">GitHub · koodina</a>
-      <a href="https://kyspls.straw.page" target="_blank" rel="noopener">straw.page · kyspls</a>
+  <!-- ===== CHAPTERS: things I've made. Copy one <article class="work"> to add a new site. Add class "flip" to put the window on the right. ===== -->
+  <section class="chapters" id="chapters">
+    <div class="gutter">
+      <div class="sh">
+        <div class="frieze"></div>
+        <span class="eyebrow">Chapters</span>
+        <h2>Things I've made</h2>
+        <p>Every site I've built for the fandom, each in its own little window.</p>
+      </div>
+
+      <div class="works">
+
+        <article class="work">
+          <a class="window" href="https://koodina.github.io/phaidei-archive/" target="_blank" rel="noopener" style="--c: var(--phainon)">
+            <div class="titlebar"><span class="gems"><i></i><i></i><i></i></span><span class="name">phaidei-archive · Chapter I</span><span class="x">✕</span></div>
+            <div class="screen"><img src="images/archive.jpg" alt="The Phaidei Archive home page: a gold-on-navy header with Phainon and Mydei, a blue-to-red title and search and filter controls"></div>
+            <div class="status"><span>koodina.github.io/phaidei-archive</span><span>435 works</span></div>
+          </a>
+          <div class="info">
+            <span class="chap">Chapter I · fan archive · 2026</span>
+            <h3>Phaidei Archive</h3>
+            <p class="quote">"when khaslana burns your library so you gotta improvise"</p>
+            <p>When AO3 went down, all our favorite Phaidei fics were stuck in a messy Google Drive. So I built a proper library for them: every work saved from the Phaidei drive, with its tags kept, so you can actually find what you want to read.</p>
+            <ul class="feats">
+              <li>Search by title, author or summary, and filter by any tag, rating or status</li>
+              <li>A "Surprise me" button for when you can't decide</li>
+              <li>Bookmarks that live only in your own browser</li>
+              <li>A built-in reader, fed by a little Python script that turns saved epubs into data</li>
+            </ul>
+            <div class="stats"><div><b>435</b><span>works archived</span></div><div><b>0</b><span>ads or AI</span></div></div>
+            <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span></div>
+            <a class="visit" href="https://koodina.github.io/phaidei-archive/" target="_blank" rel="noopener">Open the archive ↗</a>
+          </div>
+        </article>
+
+        <article class="work flip">
+          <a class="window" href="https://koodina.github.io/Lost-Phone-Phaidei-Au/" target="_blank" rel="noopener" style="--c: var(--mydei)">
+            <div class="titlebar"><span class="gems"><i></i><i></i><i></i></span><span class="name">lost-phone · Chapter II</span><span class="x">✕</span></div>
+            <div class="screen phone"><img src="images/lock.jpg" alt="Phainon's phone lock screen: forget-me-not wallpaper, 07:51, and missed calls and messages from Castorice, Hyacine and Aglaea"></div>
+            <div class="status"><span>koodina.github.io/Lost-Phone-Phaidei-Au</span><span>12% battery</span></div>
+          </a>
+          <div class="info">
+            <span class="chap">Chapter II · interactive AU · 2026</span>
+            <h3>Lost Phone · Phaidei AU</h3>
+            <p class="quote">"Saturday, 07:51. The beach at Aedes Elysiae is almost empty."</p>
+            <p>You find Phainon's phone half buried in the sand, and it won't stop buzzing. The whole story is told through his phone: you unlock it, read his messages, dig through his photos and notes, and piece together what happened. What you find, and who you answer, decides how it ends.</p>
+            <ul class="feats">
+              <li>A whole working phone: Messages, Photos, Notes, Mail, Voicemail, Calendar, Safari, Find My, Wallet and Music</li>
+              <li>A hidden album with its own password, and clues tracked as you find them</li>
+              <li>Several endings, depending on what you discover and who you reply to</li>
+              <li>Sound, ocean ambience and Coronal Radiance playing in the background</li>
+            </ul>
+            <div class="stats"><div><b>10</b><span>apps</span></div><div><b>46</b><span>photos</span></div><div><b>34</b><span>songs</span></div></div>
+            <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Web Audio</span></div>
+            <a class="visit" href="https://koodina.github.io/Lost-Phone-Phaidei-Au/" target="_blank" rel="noopener">Pick up the phone ↗</a>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="window" style="--c: var(--lilac)">
+            <div class="titlebar"><span class="gems"><i></i><i></i><i></i></span><span class="name">untitled · Chapter III</span><span class="x">✕</span></div>
+            <div class="screen soon">still being written…</div>
+            <div class="status"><span>coming soon</span><span>0%</span></div>
+          </div>
+          <div class="info">
+            <span class="chap">Chapter III · in progress</span>
+            <h3>The next one</h3>
+            <p>A new Phaidei project is always cooking. Follow me on Twitter so you don't miss it when it drops.</p>
+            <div class="note">↳ got an idea for the next AU? tell me!</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POSTSCRIPT: contact ===== -->
+  <section class="postscript" id="postscript">
+    <div class="gutter">
+      <div class="sh">
+        <div class="frieze"></div>
+        <span class="eyebrow">Postscript</span>
+      </div>
+      <div class="letter">
+        <h2>Tell me how it went</h2>
+        <p>Which ending did you get? Got a fic you want added to the archive, or an idea for the next AU? My DMs are open.</p>
+        <div class="links">
+          <a href="https://x.com/Kooguang" target="_blank" rel="noopener">Twitter · @Kooguang</a>
+          <a href="https://kyspls.straw.page" target="_blank" rel="noopener">straw.page · kyspls</a>
+          <a href="https://github.com/koodina" target="_blank" rel="noopener">GitHub · koodina</a>
+        </div>
+        <div class="sign">with love, dina ♡</div>
+      </div>
     </div>
   </section>
 
   <footer>
-    <span>handmade by dina ♡ Phainon · Mydei</span>
+    <div class="frieze"></div>
+    <span>handmade by dina · no AI, no ads · Phainon ✦ Mydei forever</span>
   </footer>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
